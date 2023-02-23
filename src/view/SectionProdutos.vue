@@ -8,41 +8,32 @@
             </div><span class="bi bi-sliders2"></span>
         </div>
         <div >
-            <ItemsProdutos class="section2"  @addQuantidade="quantidade = $event" @valorTotal="preco = $event" @addCarrinho="items= $event" />
+            <ItemsProdutos class="section2"/>
         </div>
-        
-        
-        <div><strong> </strong>Você adicionou  {{ quantidade  }} ao carrinho, valor total :${{ preco }} {{ items }}</div>
+        <CarItems/> 
     </div>
 </template>
 
 <script>
 import ItemsProdutos from './ItemsSection.vue'
 import SectionHeader2 from './SectionHeader2.vue'
-
+import CarItems from './CarItems.vue'
 
 export default {
-    props:[''],
       
 components:{
-    ItemsProdutos, SectionHeader2
+    ItemsProdutos, SectionHeader2, CarItems
 },
 
 data(){
     return{
        
-        addValor: 0,
-        preco: 0,
-        quantidade: '',
-        items: [],
         }
 },
 methods:{
     
 }
 }
-
-
 </script>
 <style>
     .SectionApp{

@@ -1,17 +1,24 @@
 <template>
   
-  <div>
-    <Header-app/>
-    <Section-app/>
-    <Footer-app/>
+  <div >
+    <HeaderApp/>
+    <SectionApp/>
+    <FooterApp/>
   </div>
 </template>
 
 <script>
-
-
+import HeaderApp from './view/HeaderApp.vue'
+import SectionApp from './view/SectionProdutos'
+import FooterApp from './view/FooterApp'
 
 export default {
+  name: 'App',
+  components: { 
+    HeaderApp,
+    SectionApp,
+    FooterApp
+  }
 
 }
 </script>
